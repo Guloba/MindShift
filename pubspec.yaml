@@ -1,0 +1,139 @@
+name: mental_health
+description: A new Flutter project.
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `pub publish`. This is preferred for private packages.
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  firebase_database: ^7.1.0
+  flutter:
+    sdk: flutter
+  firebase_auth: ^1.3.0
+  firebase_core: ^1.2.1
+  font_awesome_flutter: ^9.0.0
+  flutter_native_splash: ^1.1.8
+  google_sign_in: ^5.0.4
+  flutter_screenutil: ^5.0.0+2
+  shared_preferences: ^2.0.6
+  google_fonts: ^2.0.0
+  flutter_svg: ^0.20.0-nullsafety.3
+  fluttertoast: ^8.0.7
+  flutter_rating_bar: ^4.0.0
+  intl: ^0.17.0
+  animations: ^2.0.0
+  http: ^0.13.3
+  hexcolor: ^2.0.4
+  firebase_storage: ^10.0.4
+  image_picker: 0.8.4+1
+  get_it: ^7.2.0
+  double_back_to_close_app: ^2.0.1
+  cloud_firestore: ^2.5.1
+  liquid_progress_indicator: ^0.4.0
+  draw_graph: ^1.0.0
+  dio: ^4.0.0
+  flutter_dotenv: ^4.0.0-nullsafety.0
+  agora_rtc_engine: ^5.3.1
+  permission_handler: ^8.1.6
+  carousel_slider: ^4.0.0
+  get: ^4.6.1
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.3
+  fl_chart: ^0.40.0
+  provider: ^6.0.3
+  firebase_crashlytics: ^2.8.13
+  url_launcher: ^6.1.6
+
+dev_dependencies:
+  flutter_lints: ^1.0.3
+  flutter_test:
+    sdk: flutter
+  flutter_launcher_icons: ^0.10.0
+
+flutter_icons:
+  android: true
+  ios: true 
+  image_path: "assets/images/ReliveLogo.png"
+
+flutter_native_splash:
+  color: "#ffffff"
+  image: "assets/images/ReliveLogo.png"
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter.
+flutter:
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/images/sign-in.png
+    - assets/icons/
+    - assets/icons/bg.svg
+    - assets/icons/clock.svg
+    - assets/icons/K10_survey.jpg
+    - assets/images/detail_illustration.png
+    - assets/images/doctor1.png
+    - assets/images/doctor2.png
+    - assets/images/doctor3.png
+    - assets/images/onboarding_illustration.png
+    - assets/icons/psychiatrist.png
+    - assets/images/mentalHealth.png
+    - assets/images/google-logo.png
+    - assets/images/ReliveLogo.png
+    - assets/images/GetStarted.png
+    - assets/images/settings.png
+    - assets/images/appointment.png
+    - assets/images/patient.png
+    - assets/images/available.png
+    - assets/images/interaction.png
+    - assets/images/report.png
+    - assets/fitness_app/
+    - assets/images/
+    - .env
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware.
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages

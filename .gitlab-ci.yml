@@ -1,0 +1,31 @@
+image: cirrusci/flutter:stable
+
+stages:
+  - build
+
+before_script:
+  - touch .env
+  - echo APP_ID=$APP_ID >> .env
+  - echo APP_KEY=$APP_KEY >> .env
+  - cat .env
+  - flutter pub get
+  - flutter clean
+  - flutter analyze
+
+build:apk:
+  stage: build
+  script:
+    - flutter build apk
+  artifacts:
+    paths:
+      - build/app/outputs/apk
+    expire_in: 1 days
+
+build:bundle:
+  stage: build
+  script:
+    - flutter build appbundle
+  artifacts:
+    paths:
+      - build/app/outputs/bundle
+    expire_in: 1 days
