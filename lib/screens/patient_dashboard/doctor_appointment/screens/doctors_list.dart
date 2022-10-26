@@ -19,7 +19,8 @@ class _DoctorsListState extends State<DoctorsList> {
     doctorsCategory.removeAt(0);
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.role),
+        title: Text(widget.role,
+        style: TextStyle(color: Colors.white),),
         backgroundColor: Colors.orange,
         leading: IconButton(
           onPressed: () {

@@ -64,9 +64,20 @@ class _ResultState extends State<Result> {
     user = auth.currentUser!;
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Result"),
+        title: const Text("Result",
+        style: TextStyle(color: Colors.white),
+        ),
         // centerTitle: true,
         backgroundColor: Colors.orange,
+        leading: IconButton(
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+          icon: const Icon(
+            Icons.arrow_back,
+            color: Colors.white,
+          ),
+        ),
       ),
       backgroundColor: const Color(0xFFF2F3F8),
       body: ListView(

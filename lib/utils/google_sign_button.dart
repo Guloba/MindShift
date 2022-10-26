@@ -136,7 +136,8 @@ class _GoogleSignInState extends State<GoogleSignIn> {
                       borderRadius: BorderRadius.all(Radius.circular(50)))),
             ),
           )
-        : const CircularProgressIndicator();
+        : const CircularProgressIndicator(
+          valueColor: AlwaysStoppedAnimation<Color>(Colors.orangeAccent),);
   }
 
   void showMessage(String message) {

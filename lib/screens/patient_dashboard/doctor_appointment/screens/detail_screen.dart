@@ -4,6 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:mental_health/screens/patient_dashboard/doctor_appointment/components/schedule_card.dart';
 import 'package:mental_health/screens/patient_dashboard/doctor_appointment/screens/token_maker.dart';
 import 'package:mental_health/utils/load_profile_pic.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../constant.dart';
 import 'audio_calling.dart';
 
@@ -134,7 +135,18 @@ class _DetailScreenState extends State<DetailScreen> {
                                                             backgroundColor:
                                                                 Colors.orange,
                                                             title: const Text(
-                                                                "Audio Calling"),
+                                                                "Audio Calling",
+                                                                style: TextStyle(color: Colors.white),
+                                                                ),
+                                                                leading: IconButton(
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+          icon: const Icon(
+            Icons.arrow_back,
+            color: Colors.white,
+          ),
+        ),
                                                           ),
                                                           body:
                                                               const JoinChannelAudio(),
@@ -156,16 +168,20 @@ class _DetailScreenState extends State<DetailScreen> {
                                         const SizedBox(
                                           width: 16,
                                         ),
-                                        Container(
-                                          padding: const EdgeInsets.all(10),
-                                          decoration: BoxDecoration(
-                                            color:
-                                                kYellowColor.withOpacity(0.1),
-                                            borderRadius:
-                                                BorderRadius.circular(10),
-                                          ),
-                                          child: SvgPicture.asset(
-                                            'assets/icons/chat.svg',
+                                        InkWell(
+                                          onTap: () => launchUrl(Uri.parse('https://api.whatsapp.com/send?phone=256778035128'),
+                                          mode: LaunchMode.externalApplication),
+                                          child: Container(
+                                            padding: const EdgeInsets.all(10),
+                                            decoration: BoxDecoration(
+                                              color:
+                                                  kYellowColor.withOpacity(0.1),
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                            ),
+                                            child: SvgPicture.asset(
+                                              'assets/icons/chat.svg',
+                                            ),
                                           ),
                                         ),
                                         const SizedBox(
@@ -182,7 +198,18 @@ class _DetailScreenState extends State<DetailScreen> {
                                                             backgroundColor:
                                                                 Colors.orange,
                                                             title: const Text(
-                                                                "Video Calling"),
+                                                                "Video Calling",
+                                                                style: TextStyle(color: Colors.white),
+                                                                ),
+                                                                leading: IconButton(
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+          icon: const Icon(
+            Icons.arrow_back,
+            color: Colors.white,
+          ),
+        ),
                                                           ),
                                                           body:
                                                               const TokenMaker(),

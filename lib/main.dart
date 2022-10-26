@@ -6,8 +6,7 @@ import 'utils/constants.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart' as dot_env;
 import 'dart:async';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
-import 'package:url_launcher/link.dart';
-import 'package:url_launcher/url_launcher.dart';
+
 
 Future main() async {
   await dot_env.load(fileName: ".env");
@@ -29,7 +28,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/initial-screen',
       routes: Navigate.routes,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.orange,
       ),
     );
   }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:mental_health/screens/k_ten_scale/controllers/question_controller.dart';
+import 'package:mental_health/screens/k_ten_scale/screens/score/score_screen.dart';
 import '../../../constants.dart';
 import 'question_card.dart';
 
@@ -56,7 +57,7 @@ class Body extends StatelessWidget {
               Expanded(
                 child: PageView.builder(
                   // Block swipe to next qn
-                  physics: const NeverScrollableScrollPhysics(),
+                  physics: const PageScrollPhysics(),
                   controller: _questionController.pageController,
                   onPageChanged: _questionController.updateTheQnNum,
                   itemCount: _questionController.questions.length,
@@ -65,6 +66,31 @@ class Body extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: kDefaultPadding),
+              const Divider(thickness: 1.5, color: kSecondaryColor),
+              InkWell(
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (BuildContext context) =>
+                              const ScoreScreen()));
+                    },
+                    child: Container(
+                      width: double.infinity,
+                      alignment: Alignment.center,
+                      padding:
+                          const EdgeInsets.all(kDefaultPadding * 0.75), // 15
+                      decoration: const BoxDecoration(
+                        gradient: kPrimaryGradient,
+                        borderRadius: BorderRadius.all(Radius.circular(12)),
+                      ),
+                      child: Text(
+                        "Let's checkout your score",
+                        style: Theme.of(context)
+                            .textTheme
+                            .labelLarge!
+                            .copyWith(color: Colors.black),
+                      ),
+                    ),
+                  ),
             ],
           ),
         )

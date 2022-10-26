@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
 final List<String> imagesList = [
-  'https://akm-img-a-in.tosshub.com/indiatoday/sunsetyoga-2_647_062115121022.jpg?Q7x3aPFYhLV6E2CgD7oXmSdjoh5wnAiq&size=1200:675',
-  'https://julierolandrealtor.com/wp-content/uploads/2017/07/yoga-silhouettes.jpg',
-  'https://i.guim.co.uk/img/media/d8b7a69601c6ac049fd8e57819786adc91506003/0_2_2545_1528/master/2545.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=694f53610eb345e25c763f20935d7c90',
-  'https://cdn1.coachmag.co.uk/sites/coachmag/files/2020/01/best-abs-exercises.jpg',
+  'https://static01.nyt.com/images/2017/03/13/well/move/NYT_Strength-training_Bodyweight-Squat_Christine_Final/NYT_Strength-training_Bodyweight-Squat_Christine_Final-blog480-v2.jpg',
+  'https://static01.nyt.com/images/2019/02/26/science/26-PUSHUP/NYT_Strength-Training_Pushup_Howard_Final-blog480-v2.jpg',
+  'https://static01.nyt.com/images/2017/03/13/well/move/NYT_StrengthTraining_Mountain-Climbers_Christine_Final/NYT_StrengthTraining_Mountain-Climbers_Christine_Final-blog480-v2.jpg',
+  'https://static01.nyt.com/images/2017/03/13/well/move/NYT_Strength-Training_Forearm-Plank_Howard_Final/NYT_Strength-Training_Forearm-Plank_Howard_Final-blog480-v2.jpg',
 ];
 
 class VideoSuggestions extends StatefulWidget {
@@ -75,15 +75,15 @@ class _VideoSuggestionsState extends State<VideoSuggestions> {
                               const SizedBox(
                                 width: 10,
                               ),
-                              const Icon(
-                                Icons.alarm,
-                                size: 20,
-                                color: Colors.white,
-                              ),
-                              const Text(
-                                "5 min",
-                                style: TextStyle(color: Colors.white),
-                              ),
+                              // const Icon(
+                              //   Icons.alarm,
+                              //   size: 20,
+                              //   color: Colors.white,
+                              // ),
+                              // const Text(
+                              //   "5 min",
+                              //   style: TextStyle(color: Colors.white),
+                              // ),
                               const SizedBox(
                                 width: 100,
                               ),

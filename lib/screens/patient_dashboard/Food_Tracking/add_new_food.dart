@@ -41,9 +41,19 @@ class _AddNewFoodPageState extends State<AddNewFoodPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Add New Food"),
+        title: const Text("Add New Food",
+        style: TextStyle(color: Colors.white),),
         backgroundColor: Colors.orange,
         elevation: 1,
+        leading: IconButton(
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+          icon: const Icon(
+            Icons.arrow_back,
+            color: Colors.white,
+          ),
+        ),
       ),
       body: Container(
         width: double.infinity,

@@ -37,10 +37,21 @@ class _InputPageState extends State<InputPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Body Mesurement"),
+        title: const Text("Body Measurement",
+        style: TextStyle(color: Colors.white),
+        ),
         // centerTitle: true,
 //        backgroundColor: Color(0xFF313131),
         backgroundColor: Colors.orange,
+        leading: IconButton(
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+          icon: const Icon(
+            Icons.arrow_back,
+            color: Colors.white,
+          ),
+        ),
       ),
       backgroundColor: const Color(0xFFF2F3F8),
       body: ListView(

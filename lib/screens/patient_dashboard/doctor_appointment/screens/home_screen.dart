@@ -1,9 +1,11 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:mental_health/screens/patient_dashboard/doctor_appointment/components/category_card.dart';
 import 'package:mental_health/screens/patient_dashboard/doctor_appointment/components/doctor_card.dart';
 import 'package:mental_health/screens/patient_dashboard/doctor_appointment/components/search_bar.dart';
 import 'package:url_launcher/link.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../constant.dart';
 import 'doctor_model.dart';
 
@@ -115,49 +117,189 @@ class _HomeScreenState extends State<HomeScreen> {
           const SizedBox(
             width: 10,
           ),
-          CategoryCard('Articles', 'assets/icons/dental_surgeon.png',
-              kBlueColor, 'Articles',
-              child: Link(
-                target: LinkTarget.self,
-                uri: Uri.parse('https://www.aota.org'),
-                builder: (context, followLink) => GestureDetector(
-                  onTap: followLink,
-                child: Text(
-                  'Articles',),
+          SizedBox(
+      width: 130,
+      height: 160,
+      child: InkWell(
+        onTap: () => launchUrl(Uri.parse('https://mentalhealthuganda.org')),
+        child: Stack(
+          children: <Widget>[
+            Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Container(
+                width: 110,
+                height: 137,
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 16,
+                  vertical: 16,
+                ),
+                child: Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Text(
+                    'Articles',
+                    style: TextStyle(
+                      color: kTitleTextColor,
+                    ),
+                  ),
                 ),
               ),
-          ),
+            ),
+            Positioned(
+              right: 0,
+              child: Container(
+                height: 84,
+                width: 84,
+                decoration: BoxDecoration(
+                  color: kYellowColor,
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: Image.asset(
+                  'assets/icons/dental_surgeon.png',
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    ),
+          // CategoryCard('Articles', 'assets/icons/dental_surgeon.png',
+          //     kBlueColor, InkWell(
+          //       onTap:() => launchUrl(Uri.parse('https://www.aota.org')),
+          //       child: Text(
+          //         'Articles',
+          //         // style: TextStyle(decoration: TextDecoration.underline,
+          //         // color: Colors.blue),
+          //       ),
+          //     )
+          // ),
           const SizedBox(
             width: 10,
           ),
-          CategoryCard('Videos', 'assets/icons/heart_surgeon.png',
-              kYellowColor, 'Videos',
-              child: Link(
-                target: LinkTarget.self,
-                uri: Uri.parse('https://m.youtube.com/mentalhealth'),
-                builder: (context, followLink) => GestureDetector(
-                  onTap: followLink,
-                child: Text(
-                  'Videos',),
+          SizedBox(
+      width: 130,
+      height: 160,
+      child: InkWell(
+        onTap: () => launchUrl(Uri.parse('https://m.youtube.com/mentalhealth')),
+        child: Stack(
+          children: <Widget>[
+            Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Container(
+                width: 110,
+                height: 137,
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 16,
+                  vertical: 16,
                 ),
-              ),),
+                child: Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Text(
+                    'Videos',
+                    style: TextStyle(
+                      color: kTitleTextColor,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            Positioned(
+              right: 0,
+              child: Container(
+                height: 84,
+                width: 84,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: Image.asset(
+                  'assets/icons/heart_surgeon.png',
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    ),
+          // CategoryCard('Videos', 'assets/icons/heart_surgeon.png',
+          //     kYellowColor, InkWell(
+          //       onTap:() => launchUrl(Uri.parse('https://m.youtube.com/mentalhealth')),
+          //       child: Text(
+          //         'Videos',
+          //         // style: TextStyle(decoration: TextDecoration.underline,
+          //         // color: Colors.blue),
+          //       ),
+          //     )
+          // ),
           const SizedBox(
             width: 10,
           ),
-          CategoryCard('Music', 'assets/icons/eye_specialist.png',
-              kOrangeColor, 'Music',
-              child: Link(
-                target: LinkTarget.self,
-                uri: Uri.parse('https://open.spotify.com'),
-                builder: (context, followLink) => GestureDetector(
-                  onTap: followLink,
-                child: Text(
-                  'Music',),
-                ),
-              ),),
+          // CategoryCard('Music', 'assets/icons/eye_specialist.png',
+          //     kOrangeColor, InkWell(
+          //       onTap:() => launchUrl(Uri.parse('https://open.spotify.com')),
+          //       child: Text(
+          //         'Music',
+          //         // style: TextStyle(decoration: TextDecoration.underline,
+          //         // color: Colors.blue),
+          //       ),
+          //     )
+          // ),
           const SizedBox(
+            width: 10,
+          ),
+          SizedBox(
+      width: 130,
+      height: 160,
+      child: InkWell(
+        onTap: () => launchUrl(Uri.parse('https://open.spotify.com')),
+        child: Stack(
+          children: <Widget>[
+            Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Container(
+                width: 110,
+                height: 137,
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 16,
+                  vertical: 16,
+                ),
+                child: Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Text(
+                    'Music',
+                    style: TextStyle(
+                      color: kTitleTextColor,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            Positioned(
+              right: 0,
+              child: Container(
+                height: 84,
+                width: 84,
+                decoration: BoxDecoration(
+                  color: Colors.black,
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: Image.asset(
+                  'assets/icons/eye_specialist.png',
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    ),
+    const SizedBox(
             width: 30,
-          ),
+    ),
         ],
       ),
     );

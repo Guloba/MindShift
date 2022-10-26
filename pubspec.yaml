@@ -55,10 +55,14 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.3
+  better_player: any
   fl_chart: ^0.40.0
   provider: ^6.0.3
   firebase_crashlytics: ^2.8.13
   url_launcher: ^6.1.6
+  sound_stream: ^0.3.0
+  dialogflow_grpc: ^0.2.9
+  rxdart: ^0.27.5
 
 dev_dependencies:
   flutter_lints: ^1.0.3
@@ -111,6 +115,11 @@ flutter:
     - assets/fitness_app/
     - assets/images/
     - .env
+    - assets/credentials.json
+
+analyzer:
+  enable-experiment:
+    - non-nullable
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

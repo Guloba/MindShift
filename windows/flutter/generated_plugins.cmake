@@ -4,6 +4,7 @@
 
 list(APPEND FLUTTER_PLUGIN_LIST
   agora_rtc_engine
+  dialogflow_grpc
   url_launcher_windows
 )
 

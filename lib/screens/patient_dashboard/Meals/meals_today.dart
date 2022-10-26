@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:mental_health/screens/Settings_Pages/new_password.dart';
 import 'package:mental_health/services/database.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 late User users;
 String foodType = "";
@@ -61,10 +62,20 @@ class _MealsState extends State<Meals> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Set Goals"),
+        title: const Text("Set Goals",
+        style: TextStyle(color: Colors.white),),
         // centerTitle: true,
 //        backgroundColor: Color(0xFF313131),
         backgroundColor: Colors.orange,
+        leading: IconButton(
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+          icon: const Icon(
+            Icons.arrow_back,
+            color: Colors.white,
+          ),
+        ),
       ),
       backgroundColor: const Color(0xFFF2F3F8),
       body: ListView(
@@ -867,6 +878,9 @@ class _MealsState extends State<Meals> {
                   rFat.toString(),
                   rSugars.toString(),
                   rCholesterol.toString());
+                  Fluttertoast.showToast(
+                              msg: "Done",
+                              gravity: ToastGravity.TOP);
               //getTargetData();
             },
             child: Container(

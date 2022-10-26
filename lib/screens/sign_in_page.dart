@@ -344,8 +344,8 @@ class _SignInPageState extends State<SignInPage> {
       prefs.setString('email', email);
       prefs.setString('password', password);
       await auth
-          .signInWithEmailAndPassword(email: email, password: password)
-          .then((_) {
+      .signInWithEmailAndPassword(email: email, password: password)
+      .then((_) {
         user = auth.currentUser!;
         if (user.emailVerified) {
           if (prefs.getString('login_as') == "doctor") {

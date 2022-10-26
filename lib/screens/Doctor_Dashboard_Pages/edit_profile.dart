@@ -9,6 +9,7 @@ import 'package:mental_health/services/database.dart';
 import 'package:mental_health/services/locator.dart';
 import 'package:mental_health/services/user_controller.dart';
 import '../dashboard_doctor.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class DoctorProfile extends StatefulWidget {
   const DoctorProfile({Key? key}) : super(key: key);
@@ -415,6 +416,9 @@ class _DoctorProfileState extends State<DoctorProfile> {
       aboutController.text,
       "doctor",
     );
+    Fluttertoast.showToast(
+        msg: "Profile updated",
+        gravity: ToastGravity.TOP);
   }
 
   void rebuildAll(BuildContext context) {

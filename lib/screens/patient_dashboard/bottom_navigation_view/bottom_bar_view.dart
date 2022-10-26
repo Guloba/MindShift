@@ -1,6 +1,7 @@
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:mental_health/screens/patient_dashboard/chat_bot/chat_screen.dart';
 import '../fitness_app_theme.dart';
 import '../models/tab_icon_data.dart';
 
@@ -162,7 +163,8 @@ class _BottomBarViewState extends State<BottomBarView>
                           splashColor: Colors.white.withOpacity(0.1),
                           highlightColor: Colors.transparent,
                           focusColor: Colors.transparent,
-                          onTap: widget.addClick,
+                          onTap: () => Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => ChatScreen())),
                           child: const Icon(
                             Icons.mood,
                             color: FitnessAppTheme.white,

@@ -53,8 +53,19 @@ class _AimPageState extends State<AimPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Goals"),
+        title: const Text("Goals",
+        style: TextStyle(color: Colors.white),
+        ),
         backgroundColor: Colors.orange,
+        leading: IconButton(
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+          icon: const Icon(
+            Icons.arrow_back,
+            color: Colors.white,
+          ),
+        ),
       ),
       backgroundColor: const Color(0xFFF2F3F8),
       body: ListView(

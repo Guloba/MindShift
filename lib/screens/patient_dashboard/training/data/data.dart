@@ -16,39 +16,35 @@ final _legCrossStyle = Style(
   name: 'Leg Cross Style',
   time: 6,
 );
-final styles = [_standStyle,_sittingStyle,_sittingStyle,_legCrossStyle];
+final styles = [_standStyle, _sittingStyle, _legCrossStyle];
 
 final _course1 = Course(
     imageUrl: 'assets/images/course5.jpg',
     name: 'Cardio Exercises',
     time: 20,
-    students: 'Beginner'
-);
+    students: 'Beginner');
 
 final _course2 = Course(
     imageUrl: 'assets/images/course4.jpg',
     name: 'Exercises',
     time: 20,
-    students: 'Beginner'
-);
+    students: 'Beginner');
 
 final _course3 = Course(
     imageUrl: 'assets/images/course3.jpg',
     name: 'Meditation',
     time: 20,
-    students: 'Beginner'
-);
+    students: 'Beginner');
 final _course4 = Course(
     imageUrl: 'assets/images/course2.jpg',
     name: 'Daily Yoga',
     time: 30,
-    students: 'Intermediate'
-);
+    students: 'Intermediate');
 final _course5 = Course(
     imageUrl: 'assets/images/course1.jpg',
     name: 'Advance Stretching',
     time: 45,
-    students: 'Advanced'
-);
+    students: 'Advanced');
 
-final List<Course> courses = [_course1,_course3,_course2,_course4,_course5];
+final List<Course> courses = [_course1, _course3, _course2, _course4, _course5];
+

@@ -19,6 +19,15 @@ class WelcomeScreen extends StatelessWidget {
           ),
         ),
         elevation: 1,
+        leading: IconButton(
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+          icon: const Icon(
+            Icons.arrow_back,
+            color: Colors.white,
+          ),
+        ),
       ),
       body: Stack(
         fit: StackFit.expand,
@@ -58,7 +67,11 @@ class WelcomeScreen extends StatelessWidget {
                               fontWeight: FontWeight.normal))),
                   const Spacer(), // 1/6
                   InkWell(
-                    onTap: () => Get.to(const QuizScreen()),
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (BuildContext context) =>
+                              const QuizScreen()));
+                    },
                     child: Container(
                       width: double.infinity,
                       alignment: Alignment.center,
@@ -69,7 +82,7 @@ class WelcomeScreen extends StatelessWidget {
                         borderRadius: BorderRadius.all(Radius.circular(12)),
                       ),
                       child: Text(
-                        "Lets Start Survey",
+                        "Let's Start Survey",
                         style: Theme.of(context)
                             .textTheme
                             .labelLarge!

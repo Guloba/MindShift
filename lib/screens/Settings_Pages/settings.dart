@@ -4,6 +4,7 @@ import 'package:mental_health/screens/Doctor_Dashboard_Pages/edit_profile.dart';
 import 'package:mental_health/screens/Settings_Pages/about_us.dart';
 import 'package:mental_health/screens/Settings_Pages/new_password.dart';
 import 'package:mental_health/screens/Settings_Pages/help.dart';
+import 'package:mental_health/screens/k_ten_scale/screens/welcome/welcome_screen.dart';
 import 'package:mental_health/screens/patient_dashboard/fitness_app_home_screen.dart';
 import 'package:mental_health/screens/sign_in_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -169,6 +170,38 @@ class _SettingsPageState extends State<SettingsPage> {
                   ),
                   const SizedBox(
                     height: 10,
+                  ),
+                  const Divider(
+                    height: 15,
+                    thickness: 1,
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (BuildContext context) =>
+                              const WelcomeScreen()));
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 8.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            "Take a Mental Health Survey",
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.grey[600],
+                            ),
+                          ),
+                          const Icon(
+                            Icons.arrow_forward_ios,
+                            color: Colors.orange,
+                            size: 16,
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
                   const Divider(
                     height: 15,

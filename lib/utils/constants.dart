@@ -30,7 +30,7 @@ class Constants {
   static const textSignInTitle = "Welcome back!";
   static const textSmallSignIn = "You've been missed";
   static const textSignInGoogle = "Sign In With Google";
-  static const textAcc = "Don't have an account? ";
+  static const textAcc = "Don't have an account?";
   static const textSignUp = "Sign Up here";
   static const textHome = "Home";
   static const signUp = "Sign Up ";

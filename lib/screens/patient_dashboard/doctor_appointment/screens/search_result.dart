@@ -31,7 +31,9 @@ class _SearchResultState extends State<SearchResult> {
     filteredDoctorsList.removeAt(0);
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Search results"),
+        title: const Text("Search results",
+        style: TextStyle(color: Colors.white),
+        ),
         backgroundColor: Colors.orange,
         leading: IconButton(
           onPressed: () {

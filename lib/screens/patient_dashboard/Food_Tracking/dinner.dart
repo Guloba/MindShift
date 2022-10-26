@@ -29,9 +29,19 @@ class _DinnerState extends State<Dinner> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text(widget.callingText),
+          title: Text(widget.callingText,
+          style: TextStyle(color: Colors.white),),
           backgroundColor: Colors.orange,
           elevation: 1,
+          leading: IconButton(
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+          icon: const Icon(
+            Icons.arrow_back,
+            color: Colors.white,
+          ),
+        ),
           actions: <Widget>[
             IconButton(
               icon: const Icon(
